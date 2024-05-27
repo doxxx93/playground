@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: jpa-demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/jpa-demo?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: jpa
+    password: 1234
+  docker:
+    compose:
+      file: /Users/doxxx/projects/playground/jpa-demo/compose.yaml
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
